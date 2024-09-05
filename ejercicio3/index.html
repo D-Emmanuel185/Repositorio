@@ -329,26 +329,38 @@
         <p><small><del>PÁGINA CREADA POR : DANIEL EMMANUEL MENDOZA ONTIVEROS</del></small></p>
         <hr>
         <p><b>¿Tienes alguna duda o quieres aportar algo?</b></p>
-        <br>
-        <p><b>llena el siguiente formulario</b></p>
         <h2>Formulario de Contacto</h2>
-        <hr>
-        <form>
-            <p>Nombre Completo</p>
-            <input type="text" placeholder="Nombre Completo" required>
-            <p>Mensaje</p>
-            <textarea rows="5" placeholder="Mensaje" required>
-
-            </textarea>
-            <p>Motivo de Contacto</p>
-            <select required size="1">
-                <optgroup>
-                    <option value="Seleccionar" selected>Seleccionar</option>
-                    <option value="Duda">Duda</option>
-                    <option value="Comentario">Comentario</option>
-                    <option value="Colaboracion">Colaboracion</option>
-                </optgroup>
-            </select>
+        <form action="/submit" method="post">
+            <fieldset>
+                <legend>INFORMACION DE PERSONAL</legend>
+                <p>Nombre Completo</p>
+                <input type="text" placeholder="Nombre Completo" required>
+                <p>Correo Electronico</p>
+                <input type="email" placeholder="example@email.com" required>
+                <p>Motivo de Contacto</p>
+                <select required size="1">
+                    <optgroup>
+                        <option value="Seleccionar" selected>Seleccionar</option>
+                        <option value="Duda">Duda</option>
+                        <option value="Comentario">Comentario</option>
+                        <option value="Colaboracion">Colaboracion</option>
+                    </optgroup>
+                </select>
+                <p>Mensaje</p>
+                <textarea rows="5" placeholder="Mensaje" required></textarea>
+                <br>
+                <label for="lenguaje">Region</label>
+                <br>
+                <input minlength="5" maxlength="10" id="contiene" type="text" list="region" placeholder="Seleccionar">
+                <datalist id="region" name="continente">
+                    <option>America</option>
+                    <option>Europa</option>
+                    <option>Oceania</option>
+                    <option>Africa</option>
+                    <option>Asia</option>
+                </datalist><br><br>
+                <button type="submit">Enviar</button>
+            </fieldset>
         </form>
     </div>
 </body>
