@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UFT-8">
+    <title>Teoria de la Computación</title>
+</head>
+
+<body>
+    <div id="Header">
+        <h1><b>U1. Introducción a la TLF</b></h1>
+        <br>
+        <h2>Cadenas y Lenguajes</h2>
+        <hr><br>
+    </div>
+
+    <div id="Main">
+        <h1><i>Definiciones básicas</i></h1>
+        <br>
+        <hr>
+        <h2>Alfabeto, <strong>Σ</strong></h2>
+        <p>
+            Conjunto de símbolos no vacío y finito.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplos:</mark></u>
+
+            El Alfabeto español, el inglés, el alfabeto de
+            los números, el alfabeto formado por todos
+            los símbolos de un teclado, etc.
+                </pre>
+            </i>
+        </p>
+        <h2>Cadena</h2>
+        <p>
+            Secuencia finita de símbolos de un alfabeto.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplos:</mark></u>
+
+            ‘palabra’, ‘word’, ’1234’, ’alfa123’, etc.
+                </pre>
+            </i>
+        </p>
+        <h2>Longitud de una cadena, <strong>| x |</strong></h2>
+        <p>
+            Dada una cadena x, formada por símbolos de un alfabeto, Σ, su
+            longitud es el número de símbolos del alfabeto que lo forma.
+        </p>
+
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si Σ = {símbolos alfabeto español},
+                    
+            丨palabra丨= 7
+                    
+            Si Σ = {na, pa, la, bra},
+                    
+            丨palabra丨= 3   
+                </pre>
+            </i>
+        </p>
+        <h2>Cadena vacía, <strong>λ</strong></h2>
+        <p>
+            Palabra de longitud 0, (丨λ丨= 0), es decir, no contiene ningún símbolo.
+            <br>
+            <br>
+        </p>
+        <h2>Universo de un alfabeto, W(Σ)</h2>
+        <p>Todas las cadenas que se pueden formar con símbolos del alfabeto, Σ. Contiene un número infinito de
+            elementos.
+
+            La cadena vacía pertenece a todos los universos.</p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si Σ1 = {na, pa, la, bra},
+
+                W(Σ1) = {λ, na, pa, la, bra, nana,
+                        napa, nala, nabra, ...}
+                    </pre>
+            </i>
+        </p>
+        <hr>
+        <h1><i>Operaciones con cadenas</i></h1>
+        <hr>
+        <h2>Concatenación</h2>
+        <p>
+            Si x e y son cadenas, la concatenación, xy, es una cadena formada
+            por los símbolos de x seguidos de los símbolos de y.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            En Σ1 = {na, pa, la, bra},
+                    
+                Si x = pa e y = labra, xy = palabra
+                    
+            En general, xλ = λx = x
+                    
+                                    丨xy丨=丨x丨+丨y丨
+                </pre>
+            </i>
+        </p>
+        <h2>Potencia</h2>
+        <p>
+            La potencia i-ésima de una cadena x, x<sup>i</sup>, se forma por la concatenación <i>i</i> veces de
+            <i>x</i>.
+
+            Por definición, para toda cadena x, x<sup>0</sup> = λ.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            En Σ<sub>1</sub> = {na, pa, la, bra},
+
+                    Si x = pala, x<sup>2</sup> = palapala
+
+                    Si Σ<sub>2</sub> = {0, 1} y x = 01,
+
+                                     x<sup>3</sup> = 010101
+                </pre>
+            </i>
+        </p>
+        <h2>Unión</h2>
+        <p>
+            Si L<sub>1</sub> y L<sub>2</sub> son lenguajes, su unión,
+            L<sub>1</sub>UL<sub>2</sub> contendrá todas las cadenas que
+            pertenezcan a cualquiera de los
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si L<sub>1</sub>(Σ<sub>1</sub>) = {nana, napa, lana} y
+               L<sub>2</sub>(Σ<sub>1</sub>) = {λ, nana, pana, papa}
+
+               L1(Σ<sub>1</sub>) ⋃ L<sub>2</sub>(Σ<sub>1</sub>) = {λ, nana, napa,
+                                  lana, pana, papa}
+                </pre>
+            </i>
+        </p>
+        <h2>Intersección</h2>
+        <p>
+            Si L<sub>1</sub> y L<sub>2</sub> son lenguajes, su intersección,
+            L<sub>1</sub>⋂L<sub>2</sub>, contendrá todas las cadenas que pertenezcan a los dos
+            lenguajes.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+            
+            Si L<sub>1</sub>(Σ<sub>1</sub>) = {nana, napa, lana} y
+               L<sub>2</sub>(Σ<sub>1</sub>) = {λ, nana, pana, papa}
+               
+               L1(Σ<sub>1</sub>) ⋂ L<sub>2</sub>(Σ<sub>1</sub>) = {nana}
+                </pre>
+            </i>
+        </p>
+        <h2>Resta</h2>
+        <p>
+            Si L<sub>1</sub> y L<sub>2</sub> son lenguajes, la resta, L<sub>1</sub>-L<sub>2</sub> , contendrá todas
+            las cadenas que pertenezcan a L<sub>1</sub> y no pertenezcan a L<sub>2</sub>.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si      L<sub>1</sub>(Σ<sub>1</sub>) = {nana, napa, lana} y
+                    L<sub>2</sub>(Σ<sub>1</sub>) = {λ, nana, pana, papa, pala}
+                    
+                    L1(Σ<sub>1</sub>) - L<sub>2</sub>(Σ<sub>1</sub>) = {napa, lana}
+
+                    L<sub>2</sub>(Σ<sub>1</sub>) − L<sub>1</sub>(Σ<sub>1</sub>) = {λ, pana, papa, pala}
+                </pre>
+            </i>
+        </p>
+        <h2>Concatenación</h2>
+        <p>
+            Si L<sub>1</sub> y L<sub>2</sub> son lenguajes, su concatenación, L<sub>1</sub>L<sub>2</sub> , contendrá
+            todas las cadenas que se pueden formar por la concatenación de cada una
+            de las cadenas de L<sub>1</sub>, con cada una de las cadenas de L<sub>2</sub>.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si      L<sub>1</sub>(Σ<sub>1</sub>) = {nana, napa, lana} y
+                    L<sub>1</sub>(Σ<sub>1</sub>) = {λ, nana, pana, papa, pala}
+
+                    L1(Σ<sub>1</sub>)L<sub>2</sub>(Σ<sub>1</sub>) = {nana, napa, lana,
+                               nananana, napanana,
+                               lananana, nanapana, ...}
+                </pre>
+            </i>
+        </p>
+        <h2>Reflexión</h2>
+        <p>
+            La reflexión de un lenguaje L, está formada por la aplicación de la reflexión a cada una de las cadenas del
+            lenguaje.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si      L<sub>2</sub>(Σ<sub>2</sub>) = {0, 1, 00, 10, 110}
+                    
+                    L<sub>2</sub><sup>-1</sup>(Σ<sub>2</sub>) = {0, 1, 00, 01, 011}
+                </pre>
+            </i>
+        </p>
+        <h2>Cerradura Positiva</h2>
+        <p>
+            La cerradura positiva de un lenguaje L, se forma por la unión de todas las potencias del lenguaje,
+            excluyendo la potencia 0.
+            <br><br>
+            L<sup>+</sup> = ⋃<sub>i=1</sub>∞<sup>L<sup>i</sup>
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+            Si      L<sub>2</sub>(Σ<sub>2</sub>) = {0, 1}
+
+                    (L<sub>1</sub>(Σ<sub>2</sub>))<sup>+</sup> = {0, 1, 00, 01, 10, 11, 000,
+
+                                ...}
+
+            Nota. La cerradura positiva de cualquier
+            alfabeto, corresponde al universo del
+            alfabeto excluyendo la cadena vacía.
+
+                                Σ<sup>+</sup>> = W(Σ) - {λ}
+                </pre>
+            </i>
+        </p>
+        <h2>Cerradura de Kleene</h2>
+        <p>La cerradura de Kleene de un lenguaje L, se forma por la unión de la cadena vacía y la
+            cerradura positiva del lenguaje.
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+                    Si L<sub>1</sub> (Σ<sub>2</sub>) = {0, 1}
+                    
+                       (L<sub>1</sub>(Σ<sub>2</sub>))<sup>*</sup>= {λ, 0, 1, 00, 01, 10,
+                                  11, 000, ...}
+                </pre>
+            </i>
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+                    Si      L = {a}
+                            L<sup>0</sup> = {λ}
+                            L<sup>1</sup> = {a}
+                            L<sup>2</sup> = {aa} = {a<sup>2</sup>}
+                            L<sup>+</sup> = {a, a<sup>2</sup>, a<sup>3</sup>, a<sup>4</sup>, ...}
+                            L<sup>*</sup>= {λ, a, a<sup>2</sup>, a<sup>3</sup>, a<sup>4</sup>, ...}
+                </pre>
+            </i>
+        </p>
+        <p>
+            <i>
+                <pre>
+                    <u><mark>Ejemplo:</mark></u>
+
+                    Si      L = {ab}
+                            L<sup>+</sup> = {ab, abab, ababab, ...}
+                            (L<sup>+</sup>)<sup>0</sup> = {λ}
+                            (L<sup>+</sup>)<sup>1</sup> = L<sup>+</sup>
+                            (L<sup>+</sup>)<sup>2</sup> = L<sup>+</sup>L<sup>+</sup> = L<sup>+</sup>- L<sup>1</sup>
+                                  = {abab, ababab, ...}
+                            (L<sup>+</sup>)<sup>+</sup> = L<sup>+</sup>
+                            (L<sup>+</sup>)<sup>*</sup> = L<sup>*</sup>
+                            (L<sup>*</sup>)<sup>+</sup> = L<sup>*</sup>
+                            (L<sup>*</sup>)<sup>*</sup> = L<sup>*</sup>
+                </pre>
+            </i>
+        </p>
+        <hr>
+    </div>
+
+    <div>
+        <p>
+            <ins>Documentación</ins>
+            <br>
+            Documento fuente
+            <a target="_blank" title="Classroom"
+                href="https://classroom.google.com/u/0/c/NzA5MjQzMjEwMDQw/m/NzAzMzYxNDk2ODU5/details?hl=es">AQUI</a>
+            </a>
+            <br>
+        </p>
+        <hr>
+    </div>
+
+    <div>
+        <iframe src="C:\Users\Emmanuel\Visual Studio Daniel\programacion-web\ejercicio2\iframe.html" width="80%"
+            height="80%">
+
+            </src>
+        </iframe>
+    </div>
+</body>
+
+</html>
