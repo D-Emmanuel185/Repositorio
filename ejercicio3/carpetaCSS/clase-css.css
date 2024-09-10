@@ -1,0 +1,34 @@
+body {
+    background-color: #1E1E1E;
+    color: white;
+}
+
+div {
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    color: aqua;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: khaki;
+}
+
+#Header {
+    border: 1px dashed greenyellow;
+}
+
+#Main {
+    border: 1px dashed red;
+}
+
+#librery {
+    border: 1px dashed rgb(235, 135, 197);
+}
+
+#Footer {
+    border: 1px dashed yellow;
+}
