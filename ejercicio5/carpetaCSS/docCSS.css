@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+}
+
+.contenedor {
+    background-color: #1E1E1E;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed yellow;
+}
+
+.contenedor img {
+    display: inline-block;
+    margin-left: 25%;
+    margin-top: -5%;
+    width: 45%;
+    height: auto;
+}
+
+.titulo {
+    color: yellow;
+    margin-top: 2%;
+    margin-left: 20%;
+    font-size: 50px;
+}
+
+.texto {
+    color: white;
+    font-size: 15px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.boton {
+    background-color: black;
+    font-weight: 100;
+    margin-left: 40%;
+}
+
+.letras {
+    color: yellow;
+}
