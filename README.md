@@ -6,4 +6,5 @@ Trabajos clase Programacion Web
 2. [Divs y Enlaces](ejercio2/index.html)
 3. [Formulario](ejercicio3/index.html)
 ## CSS
-1. [CSS basico](ejercicio5/index.html)
+1. [CSS basico](ejercicio3/index.html)
+2. [Tarjeta](ejercicio5/index.html)
