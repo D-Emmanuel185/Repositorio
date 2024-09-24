@@ -1,0 +1,73 @@
+body {
+    background-color: #121212;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+}
+
+.formulario {
+    background-color: #2C2C2C;
+    color: #B0B0B0;
+    font-weight: 1000;
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 500px;
+}
+
+fieldset {
+    border: 4px solid #B0B0B0;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input-style {
+    background-color: black;
+    color: #E0E0E0;
+    margin-left: 50px;
+    font-size: 15px;
+    width: 250px;
+}
+
+label {
+    margin-left: 50px;
+}
+
+.inp-button {
+    background-color: #1A73E8;
+    color: yellow;
+    margin-left: 45%;
+}
+
+::placeholder {
+    color: white;
+    font-style: italic;
+}
+
+input::selection {
+    background-color: yellow;
+    color: black;
+}
+
+input:hover {
+    border: 1px solid white;
+}
+
+select:hover {
+    border: 1px solid white;
+}
+
+textarea:hover {
+    border: 1px solid white;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}

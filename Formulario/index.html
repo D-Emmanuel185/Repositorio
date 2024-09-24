@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="carpetaCSS/style.css">
+
+    <title>FORMULARIO</title>
+</head>
+
+<body>
+    <form class="formulario" action="/submit" method="post">
+        <fieldset class="marco">
+            <legend class="titlle">Formulario de Contacto</legend>
+            <br>
+            <p>Nombre</p>
+            <input class="input-style" type="text" placeholder="Nombre" required>
+            <p>Apellidos</p>
+            <input class="input-style" type="text" placeholder="Apellidos" required>
+            <p>Correo Electronico</p>
+            <input class="input-style" type="email" placeholder="example@email.com" required>
+            <p>Motivo de Contacto</p>
+            <select class="input-style" required size="1">
+                <optgroup>
+                    <option value="Seleccionar" selected>Seleccionar</option>
+                    <option value="Duda">Duda</option>
+                    <option value="Comentario">Comentario</option>
+                    <option value="Colaboracion">Colaboracion</option>
+                </optgroup>
+            </select>
+            <p>Mensaje</p>
+            <textarea class="input-style" rows="5" placeholder="Mensaje" required></textarea>
+            <br>
+            <label for="region">Region</label>
+            <br>
+            <input class="input-style" minlength="5" maxlength="10" id="contiene" type="text" list="region"
+                placeholder="Seleccionar">
+            <datalist id="region" name="continente">
+                <option>America</option>
+                <option>Europa</option>
+                <option>Oceania</option>
+                <option>Africa</option>
+                <option>Asia</option>
+            </datalist><br><br>
+            <button class="inp-button" type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
