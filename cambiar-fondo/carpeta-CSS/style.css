@@ -1,0 +1,48 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contenedor {
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px gray;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 0px none;
+    color: white;
+    font-weight: bold;
+}
+
+#boton-rojo {
+    background-color: red;
+}
+
+#boton-verde {
+    background-color: green;
+}
+
+#boton-azul {
+    background-color: blue;
+}
+
+#boton-restablecer {
+    background-color: gainsboro;
+    color: black;
+}
+
+button:hover {
+    border: 1px solid black;
+}
