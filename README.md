@@ -10,3 +10,6 @@ Trabajos clase Programacion Web
 2. [Tarjeta](ejercicio5/index.html)
 3. [Header Sticky](Pag-web/index.html)
 4. [Formulario](Formulario/index.html)
+## Js
+1. [calculadora basicat](calculadora/index.html)
+2. [cambiar fondo](cambiar-fondo/index.html)
